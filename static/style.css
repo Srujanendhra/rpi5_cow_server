@@ -1,0 +1,34 @@
+:root {
+  --bg:#f5f6f7; --card:#fff; --text:#20252b; --muted:#6c757d;
+  --line:#e2e5e8; --accent:#2f6fed; --good:#16834b; --warn:#b7791f;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:14px system-ui,-apple-system,Segoe UI,sans-serif}
+header{height:64px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 24px;position:sticky;top:0;z-index:1000}
+h1{font-size:20px;margin:0} h2{font-size:16px;margin:0 0 14px}
+header span{color:var(--muted);font-size:12px}
+main{max-width:1500px;margin:auto;padding:20px}
+button{border:1px solid var(--line);background:#fff;border-radius:7px;padding:8px 12px;cursor:pointer}
+button:hover{background:#f0f2f5}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;box-shadow:0 1px 2px #00000008}
+.top-grid,.detail-grid{display:grid;grid-template-columns:2fr 1fr;gap:16px;margin-bottom:16px}
+#map{height:520px;border-radius:8px}
+#animalMap{height:420px;border-radius:8px}
+.card-head{display:flex;justify-content:space-between;align-items:center}
+.animal-row{border-bottom:1px solid var(--line);padding:13px 5px;cursor:pointer}
+.animal-row:last-child{border:0}
+.animal-row:hover{background:#f7f8fa}
+.animal-name{font-weight:650}.muted{color:var(--muted)}
+.badge{display:inline-block;padding:3px 7px;border-radius:12px;background:#eef1f4;font-size:12px}
+.online{color:var(--good)}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.metric{background:#f7f8fa;border-radius:8px;padding:12px}.metric b{display:block;font-size:18px;margin-top:4px}
+.table-wrap{overflow:auto;max-height:480px}
+table{width:100%;border-collapse:collapse;font-size:12px}
+th,td{padding:8px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}
+th{position:sticky;top:0;background:#fafbfc}
+.hidden{display:none}.back{margin-bottom:12px}
+#animalHeader{margin-bottom:16px}
+#animalHeader h2{font-size:24px;margin-bottom:4px}
+.record{border-bottom:1px solid var(--line);padding:9px 0}
+@media(max-width:900px){.top-grid,.detail-grid{grid-template-columns:1fr}#map{height:400px}.metrics{grid-template-columns:repeat(2,1fr)}}

@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Livestock Monitor</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header>
+  <div>
+    <h1>Livestock Monitor</h1>
+    <span id="status">Connecting…</span>
+  </div>
+  <button onclick="showDashboard()">Dashboard</button>
+</header>
+
+<main>
+  <section id="dashboard">
+    <div class="top-grid">
+      <div class="card map-card">
+        <div class="card-head"><h2>Live location</h2><span id="liveCount"></span></div>
+        <div id="map"></div>
+      </div>
+      <div class="card">
+        <div class="card-head"><h2>Animals</h2><button onclick="loadAnimals()">Refresh</button></div>
+        <div id="animalList"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="animalPage" class="hidden">
+    <button class="back" onclick="showDashboard()">← All animals</button>
+    <div id="animalHeader"></div>
+
+    <div class="detail-grid">
+      <div class="card">
+        <h2>Current telemetry</h2>
+        <div id="currentTelemetry" class="metrics"></div>
+      </div>
+      <div class="card">
+        <h2>Animal information</h2>
+        <div id="animalInfo"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Movement path</h2>
+      <div id="animalMap"></div>
+    </div>
+
+    <div class="detail-grid">
+      <div class="card">
+        <h2>Vaccination history</h2>
+        <div id="vaccinations"></div>
+        <button onclick="addVaccination()">+ Add vaccination</button>
+      </div>
+      <div class="card">
+        <h2>Disease / diagnostic history</h2>
+        <div id="diagnoses"></div>
+        <button onclick="addDiagnosis()">+ Add diagnosis</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Telemetry log</h2>
+      <div class="table-wrap"><table id="telemetryTable"></table></div>
+    </div>
+  </section>
+</main>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="/static/app.js"></script>
+</body>
+</html>

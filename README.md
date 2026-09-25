@@ -224,3 +224,5 @@ The next version should add:
 15. second-IMU telemetry fields
 16. collar-side timestamps and packet sequence numbers
 17. local map tiles if the farm has no Internet
+
+writing this line to check the working of git.
